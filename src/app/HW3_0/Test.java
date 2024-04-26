@@ -5,9 +5,9 @@ public class Test {
     public static void main(String[] args) {
 
         Area[] figures = new Area[3];
-        figures[0] = new Circle(5);
-        figures[1] = new Square(6);
-        figures[2] = new Triangle(4, 9);
+        figures[0] = new Circle(7);
+        figures[1] = new Square(8);
+        figures[2] = new Triangle(7, 12);
 
         getTotalArea(figures);
     }
