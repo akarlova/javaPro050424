@@ -15,7 +15,7 @@ public class Test {
     private static void getTotalArea(Area[] figures) {
         double totalArea = 0;
         for (Area figure : figures) {
-            double area = figure.getArea();
+            double area = figure.getShapeArea();
             totalArea += area;
         }
         System.out.printf("Area of all figures is %.2f", totalArea);
