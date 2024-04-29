@@ -13,7 +13,7 @@ public class Square implements Area {
     }
 
     @Override
-    public double getArea() {
+    public double getShapeArea() {
         return sideSquare*sideSquare;
     }
 }

@@ -11,7 +11,7 @@ public class Circle implements Area{
     }
 
     @Override
-    public double getArea() {
+    public double getShapeArea() {
         return Math.PI * radius * radius;
     }
 }

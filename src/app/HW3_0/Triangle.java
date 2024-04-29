@@ -19,7 +19,7 @@ public class Triangle implements Area {
     }
 
     @Override
-    public double getArea() {
+    public double getShapeArea() {
         return (height*base)/2;
     }
 }
