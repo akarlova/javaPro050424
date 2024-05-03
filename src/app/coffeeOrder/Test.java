@@ -18,6 +18,7 @@ public class Test {
         todayCoffeeBoard.add(new Order(5,"Jojo"));
         todayCoffeeBoard.add(new Order(4,"Inglou"));
 
+
         todayCoffeeBoard.draw();
 
         todayCoffeeBoard.deliver();

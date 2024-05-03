@@ -15,6 +15,7 @@ public class CoffeeOrderBoard {
     }
 
     public void add(Order order) {
+
         coffeeOrders.add(order);
     }
 
@@ -43,12 +44,13 @@ public class CoffeeOrderBoard {
 
     public void draw() {
 
-        System.out.println(coffeeOrders);
+        System.out.println("===================");
+        System.out.println("Num | Name");
+        for (Order order : coffeeOrders) {
+            System.out.println(order.getOrderNumber() + " | " + order.getCustomerName());
+        }
+        System.out.println("===================");
     }
 
-    @Override
-    public String toString() {
-        return "\nNum | Name\n" +
-                coffeeOrders;
-    }
+
 }
