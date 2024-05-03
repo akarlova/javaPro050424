@@ -21,11 +21,11 @@ public class CoffeeOrderBoard {
 
     public void deliver() {
 
-        PriorityQueue<Order> todayOrders = new PriorityQueue<>(coffeeOrders);
-        if (!todayOrders.isEmpty()) {
 
-            System.out.println(todayOrders.remove() + " is ready");
-            coffeeOrders.removeFirst();
+        if (!coffeeOrders.isEmpty()) {
+
+            System.out.println(coffeeOrders.removeFirst() + " is ready");
+
         }
     }
 
