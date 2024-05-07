@@ -7,28 +7,26 @@ public class Test {
 
         CoffeeOrderBoard todayCoffeeBoard = new CoffeeOrderBoard();
 
-        todayCoffeeBoard.add(new Order(1,"Kate"));
-        todayCoffeeBoard.add(new Order(2,"Tanya"));
-        todayCoffeeBoard.add(new Order(3,"Sasha"));
-        todayCoffeeBoard.add(new Order(10,"Feng"));
-        todayCoffeeBoard.add(new Order(9,"Misha"));
-        todayCoffeeBoard.add(new Order(8,"Den"));
-        todayCoffeeBoard.add(new Order(6,"Yoda"));
-        todayCoffeeBoard.add(new Order(7,"Dio"));
-        todayCoffeeBoard.add(new Order(5,"Jojo"));
-        todayCoffeeBoard.add(new Order(4,"Inglou"));
+        todayCoffeeBoard.add(new Order("Kate"));
+        todayCoffeeBoard.add(new Order("Tanya"));
+        todayCoffeeBoard.add(new Order("Sasha"));
+        todayCoffeeBoard.add(new Order("Feng"));
+        todayCoffeeBoard.add(new Order("Misha"));
+        todayCoffeeBoard.add(new Order("Den"));
+        todayCoffeeBoard.add(new Order("Yoda"));
+        todayCoffeeBoard.add(new Order("Dio"));
+        todayCoffeeBoard.add(new Order("Jojo"));
+        todayCoffeeBoard.add(new Order("Inglou"));
 
 
         todayCoffeeBoard.draw();
-
         todayCoffeeBoard.deliver();
         todayCoffeeBoard.deliver();
-
+        todayCoffeeBoard.deliveryByNumberAnotherVariant(5);
+        todayCoffeeBoard.deliverOrderByNumber(7);
         todayCoffeeBoard.draw();
-
-        todayCoffeeBoard.deliverThisOrder(7);
-
-        todayCoffeeBoard.draw();
+Order order = new Order("Katya");
+        System.out.println(order);
 
     }
 }
