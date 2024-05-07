@@ -1,9 +1,6 @@
 package app.coffeeOrder;
 
-
 import java.util.Iterator;
-import java.util.PriorityQueue;
-
 import java.util.TreeSet;
 
 public class CoffeeOrderBoard {
@@ -13,26 +10,24 @@ public class CoffeeOrderBoard {
     public CoffeeOrderBoard() {
         this.coffeeOrders = new TreeSet<>();
     }
-
     public void add(Order order) {
-
+        int orderNumber = coffeeOrders.size()+1;
         coffeeOrders.add(order);
+        order.setOrderNumber(orderNumber);
+
     }
 
     public void deliver() {
-
-
         if (!coffeeOrders.isEmpty()) {
 
-            System.out.println(coffeeOrders.removeFirst() + " is ready");
-
+            Order deliveredOrder = coffeeOrders.removeFirst();
+            System.out.println(deliveredOrder + " is ready.");
+        } else {
+            System.out.println("No orders to deliver.");
         }
     }
-
-    public void deliverThisOrder(Integer number) {
-
+    public void deliverOrderByNumber(int number) {
         Iterator<Order> iterator = coffeeOrders.iterator();
-
         while (iterator.hasNext()) {
             Order order = iterator.next();
             if (order.getOrderNumber() == number) {
@@ -42,8 +37,19 @@ public class CoffeeOrderBoard {
         }
     }
 
-    public void draw() {
+    public Order deliveryByNumberAnotherVariant(int number) {
+        for (Order order : coffeeOrders) {
+            if(order.getOrderNumber()==number){
+                coffeeOrders.remove(order);
+                return order;
+            }
+        }
+        System.out.println("No order found for number " + number);
+        return null;
 
+    }
+
+    public void draw() {
         System.out.println("===================");
         System.out.println("Num | Name");
         for (Order order : coffeeOrders) {
@@ -51,6 +57,4 @@ public class CoffeeOrderBoard {
         }
         System.out.println("===================");
     }
-
-
 }
